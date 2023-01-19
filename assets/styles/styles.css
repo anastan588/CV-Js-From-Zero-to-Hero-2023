@@ -725,6 +725,142 @@ footer {
 
 
 @media screen and (max-width: 850px) {
-
+  .header-menu {
+    display:none;
+  }
+  .menu-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--text-font-bold);
+    color: var(--text-color);
+  }
+  .menu-item {
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
   
+  .menu-item:hover {
+    transform: scale(1.2);
+    color: var(--text-color-hover);
+  }
+  
+}
+
+@media screen and (max-width: 850px) {
+  .contacts-list {
+    flex-direction: column;
+   align-items: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cv {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .__one {
+   
+   
+  }
+
+  .__two {
+    border-bottom: 1px var(--border-style) var(--border-color);
+  }
+
+  .__three {
+
+    border-top: none;
+   
+  }
+  .__four {
+    
+    border-top: 1px var(--border-style) var(--border-color);
+  }
+  .__five {
+  }
+  .__six {
+    border-bottom: 1px var(--border-style) var(--border-color);
+  }
+  .__seven {
+  }
+  .__eight {
+  }
+
+  .cv-block {
+   justify-content: center;
+  }
+
+  .title-image {
+    width: 32px;
+    height: 32px;
+  }
+  .block-title {
+    gap: 10px;
+    justify-content: center;
+  }
+  .title-text {
+    font-size: 150%;
+  }
+
+  .block-content {
+    text-align: center;
+    font-size: 120%;
+    line-height: 150%;
+  }
+
+  .block-content_list {
+   
+    gap: 10px;
+  }
+
+  .content-item {
+    font-size: 120%;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .main-image {
+    width: 95%;
+    border: 6px double var(--text-color);
+  }
+  .cv-main_image {
+    padding: 20px;
+        height: 100%;
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+  }
+  .github-block {
+    gap: 15px;
+  }
+  .github-image {
+  }
+  .github-text {
+    font-size: 150%;
+  }
+
+  .github-text:hover {
+  }
+  .linkedin-block {
+    gap: 15px;
+  }
+  .linkedin-image {
+  }
+
+  .linkedin-text {
+    font-size: 150%;
+  }
+
+  .linkedin-text:hover {
+  }
 }
