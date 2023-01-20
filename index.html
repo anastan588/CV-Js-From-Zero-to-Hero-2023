@@ -9,15 +9,47 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <div class="overlay"></div>
       <header>
         <div class="header container">
+          <div class="burger-menu_block">
+            <div class="burger-image">
+              <div class="burger-line"></div>
+              <div class="burger-line"></div>
+              <div class="burger-line"></div>
+              <div class="burger-line"></div>
+            </div>
+            <nav class="burger-menu">
+              <div class="burger-image_open">
+                <div class="burger-line_open line_one"></div>
+                <div class="burger-line_open line_four"></div>
+              </div>
+              <ul class="burger-menu_list">
+                <li class="burger-item"><a href="#summary">Summary</a></li>
+                <li class="burger-item"><a href="#contacts">Contacts</a></li>
+                <li class="burger-item">
+                  <a href="#softskills">Soft skills</a>
+                </li>
+                <li class="burger-item">
+                  <a href="#hardskills">Hard skills</a>
+                </li>
+                <li class="burger-item"><a href="#projects">My projects</a></li>
+                <li class="burger-item"><a href="#courses">Courses</a></li>
+                <li class="burger-item"><a href="#education">Education</a></li>
+                <li class="burger-item"><a href="#languages">Languages</a></li>
+                <li class="burger-item">
+                  <a href="#experience">Working Experience</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div class="header-title">
             <h1 class="title">Anastasiya Andronava</h1>
             <p class="title-content">
               Trainee for courses “JS From Zero To Hero 2023”
             </p>
           </div>
-          <div class="header-contacts">
+          <div class="header-contacts" id="contacts">
             <ul class="contacts-list">
               <li class="contacts-item">
                 <img
@@ -47,15 +79,17 @@
           </div>
           <nav class="header-menu">
             <ul class="menu-list">
-              <li class="menu-item">Summary</li>
-              <li class="menu-item">Contacts</li>
-              <li class="menu-item">Soft skills</li>
-              <li class="menu-item">Hard skills</li>
-              <li class="menu-item">My projects</li>
-              <li class="menu-item">Courses</li>
-              <li class="menu-item">Education</li>
-              <li class="menu-item">Languages</li>
-              <li class="menu-item">Working Experience</li>
+              <li class="menu-item"><a href="#summary">Summary</a></li>
+              <li class="menu-item"><a href="#contacts">Contacts</a></li>
+              <li class="menu-item"><a href="#softskills">Soft skills</a></li>
+              <li class="menu-item"><a href="#hardskills">Hard skills</a></li>
+              <li class="menu-item"><a href="#projects">My projects</a></li>
+              <li class="menu-item"><a href="#courses">Courses</a></li>
+              <li class="menu-item"><a href="#education">Education</a></li>
+              <li class="menu-item"><a href="#languages">Languages</a></li>
+              <li class="menu-item">
+                <a href="#experience">Working Experience</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -69,7 +103,7 @@
               alt="photo"
             />
           </div>
-          <div class="cv-block __one">
+          <div class="cv-block __one" id="summary">
             <div class="block-title">
               <img
                 class="title-image"
@@ -89,7 +123,7 @@
               stress resistance. They help me in my daily and professional life.
             </p>
           </div>
-          <div class="cv-block __two">
+          <div class="cv-block __two" id="softskills">
             <div class="block-title">
               <img
                 class="title-image"
@@ -106,7 +140,7 @@
               <li class="content-item">adaptability</li>
             </ul>
           </div>
-          <div class="cv-block __three">
+          <div class="cv-block __three" id="projects">
             <div class="block-title">
               <img
                 class="title-image"
@@ -181,7 +215,7 @@
               </li>
             </ul>
           </div>
-          <div class="cv-block __four">
+          <div class="cv-block __four" id="hardskills">
             <div class="block-title">
               <img
                 class="title-image"
@@ -216,7 +250,7 @@
               <li class="content-item">Knowledge of test design techniques</li>
             </ul>
           </div>
-          <div class="cv-block __five">
+          <div class="cv-block __five" id="courses">
             <div class="block-title">
               <img
                 class="title-image"
@@ -227,7 +261,7 @@
             </div>
             <ul class="block-content_list">
               <li class="content-item">
-                <span>2023  – January </span> Intensive "Front-end start",
+                <span>2023 – January </span> Intensive "Front-end start",
                 Itlogia.<a
                   href="https://drive.google.com/file/d/19MkpnkRwPNDmR8NuvMD5Qzmkysuv5ONM/view?usp=share_link"
                   target="_blank"
@@ -264,7 +298,7 @@
               </li>
             </ul>
           </div>
-          <div class="cv-block __six">
+          <div class="cv-block __six" id="languages">
             <div class="block-title">
               <img
                 class="title-image"
@@ -278,7 +312,7 @@
               <li class="content-item">Russian – native</li>
             </ul>
           </div>
-          <div class="cv-block __seven">
+          <div class="cv-block __seven" id="education">
             <div class="block-title">
               <img
                 class="title-image"
@@ -296,7 +330,7 @@
               </li>
             </ul>
           </div>
-          <div class="cv-block __eight">
+          <div class="cv-block __eight" id="experience">
             <div class="block-title">
               <img
                 class="title-image"
@@ -343,5 +377,6 @@
         </div>
       </footer>
     </div>
+    <script src="assets/scripts/script.js"></script>
   </body>
 </html>
