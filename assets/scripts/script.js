@@ -1,3 +1,5 @@
+"use strict"
+
 let burgerImageOpen = document.querySelector(".burger-image_open");
 let burgerImage = document.querySelector(".burger-image");
 let burger = document.querySelector(".burger-menu");
@@ -7,9 +9,37 @@ let header = document.querySelector(".header");
 let overlay = document.querySelector(".overlay");
 let leftArrow = document.querySelector(".left");
 let rightArrow = document.querySelector(".right");
-let sliderImages = document.querySelectorAll(".image-block");
-let count = 0;
+let sliderImages = document.querySelector(".slider-images");
+let slide =document.querySelectorAll(".image-block");
+let countMove = 1; // шаг слайдера
+let step = 1;
+let position = 0; // положение ленты прокрутки
 
+if(window.innerWidth > 1050) {
+  var widthImage = 1000; 
+} else if (window.innerWidth <= 1050 && window.innerWidth > 1000 ) {
+  var widthImage = 950; 
+} else if (window.innerWidth <= 1000 && window.innerWidth > 900 ) {
+  var widthImage = 800;  
+} else if (window.innerWidth <= 900 && window.innerWidth > 850 ) {
+  var widthImage = 750; 
+} else if (window.innerWidth <= 850 && window.innerWidth > 700 ) {
+  var widthImage = 650; 
+} else if (window.innerWidth <= 700 && window.innerWidth > 600 ) {
+  var widthImage = 550; 
+} else if (window.innerWidth <= 600 && window.innerWidth > 550 ) {
+  var widthImage = 500;
+} else if (window.innerWidth <= 550 && window.innerWidth > 500 ) {
+    var widthImage = 450; 
+} else if (window.innerWidth <= 500 && window.innerWidth > 450 ) {
+    var widthImage = 400; 
+} else if (window.innerWidth <= 450 && window.innerWidth > 400 ) {
+    var widthImage = 350; }
+  else if (window.innerWidth <= 400 && window.innerWidth > 350 ) {
+      var widthImage = 300; 
+}   else if (window.innerWidth <= 350 && window.innerWidth > 300 ) {
+  var widthImage = 250; 
+}// ширина картинки
 
 function burgerOpen() {
     burger.classList.add("open-burger");
@@ -33,47 +63,41 @@ burgerImageOpen.addEventListener("click",burgerClose);
 burgerItem.forEach((element)=> element.addEventListener("click", burgerClose));
 
 
-function slider() {
-  for (let i=0; i<sliderImages.length; i++) {
-    sliderImages[i].classList.add("opacity");
-}
-sliderImages[count].classList.remove("opacity");
 
-};
+function sliderLeft() {
+   if (countMove < slide.length) {
+    position -= widthImage;
+    countMove++;
+  } else {
+    position = 0;
+    countMove = 1;
+  }
+   sliderImages.style.left =position+'px';
+   console.log(position);
+   console.log(countMove);
+  };
 
-slider();
 
 function sliderRight() {
+   if (countMove <= slide.length) {
+     position += widthImage;
 
-    for (let i=0; i<sliderImages.length; i++) {
-        sliderImages[i].classList.add("opacity");
-    
-    }
-    sliderImages[count].classList.remove("opacity");
-    
-    if (count+1 === sliderImages.length) {
-      count =0;
+    if (countMove>1) {
+      countMove--;
     } else {
-      count++;
-      
+       countMove = slide.length;
+       position = -(countMove-1)*widthImage;
     }
+    
+  } else {
+    position = 0;
+    countMove = 1;
+  }
+   sliderImages.style.left =position+'px';
+   console.log(position);
+   console.log(countMove);
   };
 
-
-  function sliderLeft() {
-    for (let i=0; i<sliderImages.length; i++) {
-      sliderImages[i].classList.add("opacity");
-     
-    }
-    sliderImages[count].classList.remove("opacity");
-   
-    if (count-1 === -1) {
-      count = sliderImages.length-1;
-    } else {
-      count--;
-    }
-  };
-
-rightArrow.addEventListener("click", sliderRight);
-leftArrow.addEventListener("click", sliderLeft);
+rightArrow.addEventListener("click", sliderLeft);
+leftArrow.addEventListener("click", sliderRight);
 
